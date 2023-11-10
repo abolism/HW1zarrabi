@@ -10,7 +10,7 @@ ll mergeTwo(ll array[], ll temp_array[],
     ll p = lastidx_array1 + 1;
     ll i = firstidx_array1;
 
-    for (; i <= lastidx_array1; i++) {
+    for (ll i = firstidx_array1; i <= lastidx_array1; i++) {
         bool found = false;
         while (p <= firstidx_array2) {
             if(array[i] >= array[p]){
@@ -42,7 +42,7 @@ ll mergeTwo(ll array[], ll temp_array[],
     while (p <= firstidx_array2)
         temp_array[k++] = array[p++];
 
-    for (i = firstidx_array1; i <= firstidx_array2; i++)
+    for (ll i = firstidx_array1; i <= firstidx_array2; i++)
         array[i] = temp_array[i];
     return counter;
 }
@@ -70,12 +70,6 @@ ll mergeSortPrint(ll arr[], ll N)
     ll temp[N];
     return mergeSort(arr, temp, 0, N - 1);
 }
-
-//ll mergeSortPrint(ll arr[], ll N)
-//{
-//    ll temp[N];
-//    return mergeSort(arr, temp, 0, N - 1);
-//}
 int main()
 {
     ll n;
